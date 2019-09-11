@@ -23,3 +23,6 @@ Brainstorming possible workstreams
 
 # ??
 - 
+
+# Other Random Stuff
+- Develop short presentation that any participant can use to do a 5-minute lightning talk overview of EDDI at workshops/meetings/conferences
