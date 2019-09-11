@@ -10,6 +10,8 @@ Brainstorming possible workstreams
 
 # Canary Domains / Conflict Detection
 
+# Scaling / Architecture Discussions
+
 # ??
 
 # ??
