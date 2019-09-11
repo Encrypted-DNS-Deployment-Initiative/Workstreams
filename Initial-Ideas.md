@@ -7,11 +7,19 @@ Brainstorming possible workstreams
 - This can also be used by independent measurement researcher & orgs
 
 # Resolver Discovery & Selection
+- 
 
 # Canary Domains / Conflict Detection
+- 
 
 # Scaling / Architecture Discussions
+- 
+
+# Security / Attack Resilience
+- 
 
 # ??
+- 
 
 # ??
+- 
