@@ -1,3 +1,6 @@
+(note: Anyone that opens an issue or pull request will be added as a collaborator with write access while we're in brainstorming mode. If you disagree with anything added/changed, just add bracketed text next to that area or something like that, such as "Discuss: Not sure I agree, we should do X instead.")
+
+
 # Workstreams
 Brainstorming possible workstreams
 
