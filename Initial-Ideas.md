@@ -25,6 +25,7 @@ Brainstorming possible workstreams
 - Support for forwarding may be necessary to maintain parity with current scaling (e.g. ratios)
 - New DNS flag or EDNS flag or OPT to signal request to encrypt (including propagation of flag and encryption)
 - May require new kind of flag or OPT that is NOT hop-by-hop, but rather is propagated to from the originating client to the full resolver
+- See "Recursive-to-Authoritative" below as well
 
 # Security / Attack Resilience
 - Downgrade resistance is necessary
@@ -43,6 +44,13 @@ Brainstorming possible workstreams
 - Trust anchor, provisioning of such, and signing RPZ-specific responses?
 - Changes to RPZ architecture to allow mixing RPZ and non-RPZ resolvers?
 - Add structure to current unordered "nameserver" list in /etc/resolv.conf, similar to SRV semantic mechanisms?
+
+# Recursive-to-Authoritative
+- Encryption generally is okay, but simply replacing Do53 with ADoT (for example) causes immediate scaling pain
+- "Poster child" of scaling: large recursive operator (google or cloudflare) to large authority operator (godaddy)
+- Site-to-site encryption mechanisms may scale better
+- Separate transport from DNS messages to facilitate scaling
+- Open question: is it desirable/necessary to facilitate anonymity of resolver operators, or would a mechanism that requires enrollment or coordination or identification be acceptable?
 
 # Other Random Stuff
 - Develop short presentation that any participant can use to do a 5-minute lightning talk overview of EDDI at workshops/meetings/conferences
