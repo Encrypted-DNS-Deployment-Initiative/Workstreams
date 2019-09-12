@@ -7,22 +7,39 @@ Brainstorming possible workstreams
 - This can also be used by independent measurement researcher & orgs
 
 # Resolver Discovery & Selection
-- 
+- Needs to handle one or more FORWARDERS between client and full resolver
+- If done right, will provide _DNS Traceroute_ functionality, at last
+- Overlapping RFC-1918 scopes may result in forwarders and/or the final resolver not being directly accessible from the client
+- Forwarders and resolvers might not have public FQDNs and may not even have private FQDNs
+- Need some unique name in an available namespace that is guaranteed to not collide
+- Maybe base on IPv6 ULA or some other GUID name-generator
 
 # Canary Domains / Conflict Detection
-- 
+- Should only be local and should be relative to server's locally scoped name (if that is even possible)
+- E.g. canary-domain.forwarder-or-resolver-name.local (not literally, just semantically)
 
 # Scaling / Architecture Discussions
-- 
+- Support for forwarding may be necessary to maintain parity with current scaling (e.g. ratios)
+- New DNS flag or EDNS flag or OPT to signal request to encrypt (including propagation of flag and encryption)
+- May require new kind of flag or OPT that is NOT hop-by-hop, but rather is propagated to from the originating client to the full resolver
 
 # Security / Attack Resilience
-- 
+- Downgrade resistance is necessary
+- DNSSEC signing is very likely a requirement regardless of specific mechanism(s)
+- DANE TLSA records should probably be mandatory unless someone can provide counter-examples
 
-# ??
-- 
+# DoT Positioning
+- Propose that DoH exclusive of DoT is not acceptable to the DNS community at large
+- Propose that resolver choices need to include DoT-only providers, and that DoH vs DoT needs to be exposed to users if a provider supports both
+- Propose DoT blocking be used as a proxy signal for network policy (substitute for canary domains)
 
-# ??
-- 
+# Opt-in vs opt-out
+- Generally, opt-out is a terrible idea, something that has been demonstrated repeatedly.
+
+# RPZ Issues
+- Trust anchor, provisioning of such, and signing RPZ-specific responses?
+- Changes to RPZ architecture to allow mixing RPZ and non-RPZ resolvers?
+- Add structure to current unordered "nameserver" list in /etc/resolv.conf, similar to SRV semantic mechanisms?
 
 # Other Random Stuff
 - Develop short presentation that any participant can use to do a 5-minute lightning talk overview of EDDI at workshops/meetings/conferences
