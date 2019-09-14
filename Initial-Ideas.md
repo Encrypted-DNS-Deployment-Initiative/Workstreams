@@ -37,6 +37,9 @@ Brainstorming possible workstreams
 - Propose that resolver choices need to include DoT-only providers, and that DoH vs DoT needs to be exposed to users if a provider supports both
 - Propose DoT blocking be used as a proxy signal for network policy (substitute for canary domains)
 
+# DNS Data Policies
+- Best practices concerning logging, use, disclosure, etc.
+
 # Opt-in vs opt-out
 - Generally, opt-out is a terrible idea, something that has been demonstrated repeatedly.
 
