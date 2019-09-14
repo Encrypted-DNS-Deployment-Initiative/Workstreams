@@ -40,8 +40,12 @@ Brainstorming possible workstreams
 # Opt-in vs opt-out
 - Generally, opt-out is a terrible idea, something that has been demonstrated repeatedly.
 
-# RPZ Issues
-- Trust anchor, provisioning of such, and signing RPZ-specific responses?
+# RPZ and Trust Anchor Issues
+- Trust anchor(s), provisioning/publishing of such, maybe via resolver-naming authoritative RRs? Self-signed or not?
+- Use trust anchors to auto-discover split-DNS environment (resolver type)?
+- Use trust anchors to auto-discover RPZ servers (or combined RPZ server-resolvers)?
+- Order trust anchors to prevent abuse or to scope functionality (no squatting, maybe private domains and/or RPZ only), including RPZ-first vs RPZ-second (no-cache vs cache)
+- Signing RPZ-specific responses?
 - Changes to RPZ architecture to allow mixing RPZ and non-RPZ resolvers?
 - Add structure to current unordered "nameserver" list in /etc/resolv.conf, similar to SRV semantic mechanisms?
 
