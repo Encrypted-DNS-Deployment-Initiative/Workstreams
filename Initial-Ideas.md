@@ -59,5 +59,9 @@ Brainstorming possible workstreams
 - Separate transport from DNS messages to facilitate scaling
 - Open question: is it desirable/necessary to facilitate anonymity of resolver operators, or would a mechanism that requires enrollment or coordination or identification be acceptable?
 
+# Things to document
+- DNS current uses and use cases so that proposals can be evaluated to score what works/what breaks
+- Capture any territorial compliance/legal requirements 
+
 # Other Random Stuff
 - Develop short presentation that any participant can use to do a 5-minute lightning talk overview of EDDI at workshops/meetings/conferences
