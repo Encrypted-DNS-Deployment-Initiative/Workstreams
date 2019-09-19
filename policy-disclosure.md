@@ -5,6 +5,7 @@ IMO it would be nice to have a standardized DNS data privacy policy that any org
 I could maybe see the top of it being a bit of a nutritional label for simplicity, such as:
 
 Policy Covers: [   ] DEFAULT ISP CUSTOMER USE  [   ] SPECIALIZED OPT-IN SERVICE
+Protocols Supported: [    ] UDP/TCP 53 [    ] DoT TCP/853 [    ] DoH TCP/443 [    ] OTHER _____
 DNSSEC Validation: [   ] YES  [   ] NO
 NXDOMAIN Redirection: [   ] YES  [   ] NO
 DNS Response Filtering: [   ] NO  [   ] YES, BY DEFAULT FOR ALL USERS  [   ] IN SOME CASES - FOR OPT-IN SERVICE ONLY 
