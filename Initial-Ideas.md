@@ -8,8 +8,10 @@ Brainstorming possible workstreams
 # Testing & Measurement
 - Would be nice to have a standard recommended dnsperf test configuration, so across different implementers there is an apples-to-apples benchmark tool - https://www.dnsperf.com/
 - This can also be used by independent measurement researcher & orgs
+- Seems like a key early task
 
 # Resolver Discovery & Selection
+- Work on methods to discover possible servers and then how to select one or more
 - Needs to handle one or more FORWARDERS between client and full resolver
 - If done right, will provide _DNS Traceroute_ functionality, at last
 - Overlapping RFC-1918 scopes may result in forwarders and/or the final resolver not being directly accessible from the client
@@ -18,30 +20,35 @@ Brainstorming possible workstreams
 - Maybe base on IPv6 ULA or some other GUID name-generator
 
 # Canary Domains / Conflict Detection
+- How to detect the presence of a DNS re-writing service such as parental controls
 - Should only be local and should be relative to server's locally scoped name (if that is even possible)
 - E.g. canary-domain.forwarder-or-resolver-name.local (not literally, just semantically)
 
 # Scaling / Architecture Discussions
+- Share thoughts & experiences on designs, where caching is done and how, load balancers or Anycast, etc.
 - Support for forwarding may be necessary to maintain parity with current scaling (e.g. ratios)
 - New DNS flag or EDNS flag or OPT to signal request to encrypt (including propagation of flag and encryption)
 - May require new kind of flag or OPT that is NOT hop-by-hop, but rather is propagated to from the originating client to the full resolver
 - See "Recursive-to-Authoritative" below as well
 
 # Security / Attack Resilience
+- Study & share issues related to maintaining security and establishing good resistance to attack, malformed packets, etc.
 - Downgrade resistance is necessary
 - DNSSEC signing is very likely a requirement regardless of specific mechanism(s)
 - DANE TLSA records should probably be mandatory unless someone can provide counter-examples
 
 # DoT Positioning
-- Propose that DoH exclusive of DoT is not acceptable to the DNS community at large
-- Propose that resolver choices need to include DoT-only providers, and that DoH vs DoT needs to be exposed to users if a provider supports both
-- Propose DoT blocking be used as a proxy signal for network policy (substitute for canary domains)
+- Propose that DoH exclusive of DoT is not acceptable to the DNS community at large (this is one opinion - would need discussion)
+- Propose that resolver choices need to include DoT-only providers, and that DoH vs DoT needs to be exposed to users if a provider supports both (this is one opinion - would need discussion)
+- Propose DoT blocking be used as a proxy signal for network policy (substitute for canary domains) (this is one opinion - would need discussion)
 
 # DNS Data Policies
 - Best practices concerning logging, use, disclosure, etc.
+- Could benefit from facilitation by an academic or rights group
 
 # Opt-in vs opt-out
-- Generally, opt-out is a terrible idea, something that has been demonstrated repeatedly.
+- Document pros and cons of each approach under different scenarios (school vs. ISP vs. whatever)
+- Generally, opt-out is a terrible idea, something that has been demonstrated repeatedly. (this is one opinion - would need discussion)
 
 # RPZ and Trust Anchor Issues
 - Trust anchor(s), provisioning/publishing of such, maybe via resolver-naming authoritative RRs? Self-signed or not?
@@ -53,7 +60,8 @@ Brainstorming possible workstreams
 - Add structure to current unordered "nameserver" list in /etc/resolv.conf, similar to SRV semantic mechanisms?
 
 # Recursive-to-Authoritative
-- Encryption generally is okay, but simply replacing Do53 with ADoT (for example) causes immediate scaling pain
+- How to secure & establish trust in the lookup chain from recursive to auth server (not necessarily TLD)
+- Encryption generally is okay, but simply replacing Do53 with ADoT (for example) causes immediate scaling pain 
 - "Poster child" of scaling: large recursive operator (google or cloudflare) to large authority operator (godaddy)
 - Site-to-site encryption mechanisms may scale better
 - Separate transport from DNS messages to facilitate scaling
