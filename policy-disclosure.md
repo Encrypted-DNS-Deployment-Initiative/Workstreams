@@ -1,4 +1,4 @@
-BRAINSORMING!!
+BRAINSTORMING!!
 
 IMO it would be nice to have a standardized DNS data privacy policy that any org could use, in any country. 
 
