@@ -45,6 +45,7 @@ Brainstorming possible workstreams
 # DNS Data Policies
 - Best practices concerning logging, use, disclosure, etc.
 - Could benefit from facilitation by an academic or rights group
+- Some initial ideas (from Jason L) at https://github.com/Encrypted-DNS-Deployment-Initiative/Workstreams/blob/master/policy-disclosure.md
 
 # Opt-in vs opt-out
 - Document pros and cons of each approach under different scenarios (school vs. ISP vs. whatever)
