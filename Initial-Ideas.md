@@ -7,8 +7,9 @@ Brainstorming possible workstreams
 
 # Testing & Measurement
 - Would be nice to have a standard recommended dnsperf test configuration, so across different implementers there is an apples-to-apples benchmark tool - https://www.dnsperf.com/
-- This can also be used by independent measurement researcher & orgs
+- This can also be used by independent measurement researcher & orgs 
 - Seems like a key early task
+- GUI utility for querying DNS via DoH, DoT or UDP - https://github.com/wttw/dox
 
 # Resolver Discovery & Selection
 - Work on methods to discover possible servers and then how to select one or more
