@@ -67,6 +67,7 @@ Brainstorming possible workstreams
 - Site-to-site encryption mechanisms may scale better
 - Separate transport from DNS messages to facilitate scaling
 - Open question: is it desirable/necessary to facilitate anonymity of resolver operators, or would a mechanism that requires enrollment or coordination or identification be acceptable?
+- EDNS0 Client Subnet should be explicitly addressed.  Ideally, clarify that ECS is allowed if privacy is maintained (via ADoT or some new mechanism).  Make it easier for users to opt out of ECS (ensuring encrypted resolvers respect scope 0).
 
 # Things to document
 - DNS current uses and use cases so that proposals can be evaluated to score what works/what breaks
