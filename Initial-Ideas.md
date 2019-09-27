@@ -24,6 +24,7 @@ Brainstorming possible workstreams
 - How to detect the presence of a DNS re-writing service such as parental controls
 - Should only be local and should be relative to server's locally scoped name (if that is even possible)
 - E.g. canary-domain.forwarder-or-resolver-name.local (not literally, just semantically)
+- How might the canary domain be standardized?
 
 # Scaling / Architecture Discussions
 - Share thoughts & experiences on designs, where caching is done and how, load balancers or Anycast, etc.
