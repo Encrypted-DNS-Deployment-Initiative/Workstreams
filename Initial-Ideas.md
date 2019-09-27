@@ -6,8 +6,9 @@ Brainstorming possible workstreams
 
 # Testing & Measurement
 - Would be nice to have a standard recommended dnsperf test configuration, so across different implementers there is an apples-to-apples benchmark tool - https://www.dnsperf.com/
-- This can also be used by independent measurement researcher & orgs
+- This can also be used by independent measurement researcher & orgs 
 - Seems like a key early task
+- GUI utility for querying DNS via DoH, DoT or UDP - https://github.com/wttw/dox
 - Conformance Test (Both client and server)
 
 # Resolver Discovery & Selection
@@ -24,6 +25,7 @@ Brainstorming possible workstreams
 - How to detect the presence of a DNS re-writing service such as parental controls
 - Should only be local and should be relative to server's locally scoped name (if that is even possible)
 - E.g. canary-domain.forwarder-or-resolver-name.local (not literally, just semantically)
+- How might the canary domain be standardized?
 
 # Scaling / Architecture Discussions
 - Share thoughts & experiences on designs, where caching is done and how, load balancers or Anycast, etc.
@@ -49,6 +51,7 @@ Brainstorming possible workstreams
 # DNS and Transport Data Policies
 - Best practices concerning logging, use, disclosure, etc.
 - Could benefit from facilitation by an academic or rights group
+- Some initial ideas (from Jason L) at https://github.com/Encrypted-DNS-Deployment-Initiative/Workstreams/blob/master/policy-disclosure.md
 
 # Opt-in vs opt-out
 - Document pros and cons of each approach under different scenarios (school vs. ISP vs. whatever)
@@ -70,6 +73,7 @@ Brainstorming possible workstreams
 - Site-to-site encryption mechanisms may scale better
 - Separate transport from DNS messages to facilitate scaling
 - Open question: is it desirable/necessary to facilitate anonymity of resolver operators, or would a mechanism that requires enrollment or coordination or identification be acceptable?
+- EDNS0 Client Subnet should be explicitly addressed.  Ideally, clarify that ECS is allowed if privacy is maintained (via ADoT or some new mechanism).  Make it easier for users to opt out of ECS (ensuring encrypted resolvers respect scope 0).
 
 # Things to document
 - DNS current uses and use cases so that proposals can be evaluated to score what works/what breaks
