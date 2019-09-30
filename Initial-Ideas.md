@@ -82,3 +82,20 @@ Brainstorming possible workstreams
 
 # Other Random Stuff
 - Develop short presentation that any participant can use to do a 5-minute lightning talk overview of EDDI at workshops/meetings/conferences
+
+# Ideas from 9.19.19 London Meeting
+
+- Implications of the shift of resolver selection from the operating system to applications
+- Definitions, eg of “user” in the context of resolver choices – see the IETF glossary as a starting point to avoid duplication of effort
+- List of DNS RFCs – Bert Hubert of PowerDNS has a good starting point
+- Defining a robust test methodology CDN interaction
+- Possible DoH protocol enhancements, eg resolver discovery mechanism, cooperation with DHCP
+- Information / fact gathering, eg on customer satisfaction with DNS arrangements, data on underlying issues, the real situation regarding DNS monetisation (for advertising, cyber intel, CDN performance etc)
+- Performance of DNS over QUIC
+- Educational materials – eg what is DNS, Do53 vs DoT vs DoH etc
+- Explanatory deck on EDDI with high level content on goals etc
+- DNSSEC
+- Parental controls
+- Browser flag to show what DNS resolver and protocol is being used at any given time
+- Schedule of events covering encrypted DNS – RIPE has good starting point, to ensure the DNS OARC meetings are added, ditto the EU High Level Internet Forum on 10th October. Andrew C to collate, input needed from others
+- “TRR” additions / modifications – eg for public DNS providers, data to be shared with network operators re malware
